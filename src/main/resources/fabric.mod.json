@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "legacy-netty",
+  "version": "${version}",
+  "name": "Legacy Netty",
+  "description": "Update Netty to the latest version.",
+  "authors": [
+    "LooFifteen"
+  ],
+  "contact": {
+    "sources": "https://github.com/LooFifteen/legacy-netty"
+  },
+  "license": "MIT",
+  "icon": "assets/legacy-netty/icon.png",
+  "environment": "*",
+  "mixins": [
+    "legacy-netty.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "1.8.9",
+    "java": ">=8"
+  }
+}

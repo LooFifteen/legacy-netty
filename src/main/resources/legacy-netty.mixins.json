@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.lu15.legacynetty.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "common.BootstrapMixin",
+    "common.PacketByteBufMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
