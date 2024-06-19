@@ -16,9 +16,19 @@
   "mixins": [
     "legacy-netty.mixins.json"
   ],
+  "entrypoints": {
+    "main": [
+      "dev.lu15.legacynetty.LegacyNetty"
+    ]
+  },
   "depends": {
     "fabricloader": ">=0.15.11",
     "minecraft": "1.8.9",
     "java": ">=8"
+  },
+  "custom": {
+    "modmenu":{
+      "badges": ["library"]
+    }
   }
 }

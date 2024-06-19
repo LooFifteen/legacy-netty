@@ -2,7 +2,6 @@ plugins {
     id("fabric-loom")
     id("legacy-looming")
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    `maven-publish`
 }
 
 group = property("maven_group")!!
@@ -43,7 +42,8 @@ dependencies {
         modLocalRuntime(module)
     }
 
-    shadow(api("io.netty:netty-all:4.1.111.Final")!!)
+    implementation(project(":", configuration = "namedElements"))!!
+    shadow(implementation("io.netty.incubator:netty-incubator-transport-native-io_uring:0.0.21.Final:linux-x86_64")!!)
 
     // dev env
     modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
@@ -63,27 +63,15 @@ tasks {
 
     shadowJar {
         configurations = listOf(project.configurations.shadow.get())
+
+        dependencies {
+            include(dependency("io.netty.incubator:netty-incubator-transport-native-io_uring"))
+            include(dependency("io.netty.incubator:netty-incubator-transport-classes-io_uring"))
+        }
     }
 
     remapJar {
         dependsOn(shadowJar)
         inputFile.set(shadowJar.get().archiveFile)
-    }
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            artifactId = property("archives_base_name").toString()
-            from(components["java"])
-        }
-    }
-
-    repositories {
-        maven {
-            name = "hypera"
-            url = uri("https://repo.hypera.dev/releases/")
-            credentials(PasswordCredentials::class)
-        }
     }
 }

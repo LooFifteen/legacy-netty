@@ -13,3 +13,11 @@ pluginManagement {
 }
 
 rootProject.name = "legacy-netty"
+
+setOf(
+    "native-transport"
+).forEach {
+    val name = "legacy-netty-$it"
+    include(name)
+    project(":$name").projectDir = file(it)
+}

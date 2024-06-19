@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "legacy-netty-native-transport",
+  "version": "${version}",
+  "name": "Legacy Netty Native Transport",
+  "description": "Use native transport for multiplayer connections.",
+  "authors": [
+    "LooFifteen"
+  ],
+  "contact": {
+    "sources": "https://github.com/LooFifteen/legacy-netty"
+  },
+  "license": "MIT",
+  "icon": "assets/legacy-netty-native-transport/icon.png",
+  "environment": "*",
+  "mixins": [
+    "legacy-netty-native-transport.mixins.json"
+  ],
+  "entrypoints": {
+    "main": [
+      "dev.lu15.legacynetty.nativetransport.LegacyNettyNativeTransport"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "1.8.9",
+    "java": ">=8",
+    "legacy-netty": ">=0.1.0"
+  }
+}
