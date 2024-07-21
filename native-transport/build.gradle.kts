@@ -43,7 +43,7 @@ dependencies {
     }
 
     implementation(project(":", configuration = "namedElements"))!!
-    shadow(implementation("io.netty.incubator:netty-incubator-transport-native-io_uring:0.0.21.Final:linux-x86_64")!!)
+    shadow(implementation("io.netty.incubator:netty-incubator-transport-native-io_uring:0.0.25.Final:linux-x86_64")!!)
 
     // dev env
     modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
