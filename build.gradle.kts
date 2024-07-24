@@ -35,10 +35,11 @@ dependencies {
     mappings("net.legacyfabric:yarn:${property("yarn_mappings")}")
     modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
+    val fabricApiVersion = "${property("api_version")}+${property("minecraft_version")}"
     setOf(
         "legacy-fabric-logger-api-v1"
     ).forEach {
-        val module = legacy.apiModule(it, "1.9.4+1.8.9")
+        val module = legacy.apiModule(it, fabricApiVersion)
         modImplementation(module)
         modLocalRuntime(module)
     }
@@ -49,7 +50,7 @@ dependencies {
     modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
     localRuntime("org.apache.logging.log4j:log4j-core:2.23.1")
     modLocalRuntime("maven.modrinth:legacy-mod-menu:1.1.0")
-    modLocalRuntime(legacy.apiModule("legacy-fabric-resource-loader-v1", "1.9.4+1.8.9")!!)
+    modLocalRuntime(legacy.apiModule("legacy-fabric-resource-loader-v1", fabricApiVersion)!!)
 }
 
 tasks {
