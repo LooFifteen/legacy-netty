@@ -40,7 +40,7 @@ public enum NativeTransportOption {
         this.constructor = new Lazy<EventLoopGroup>() {
             @Override
             protected EventLoopGroup create() {
-                return NativeTransportOption.this.constructor.get();
+                return constructor.get();
             }
         };
     }

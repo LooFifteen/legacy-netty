@@ -4,7 +4,8 @@
   "package": "dev.lu15.legacynetty.nativetransport.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ClientConnectionMixin"
+    "ClientConnectionMixin",
+    "ServerNetworkIoMixin"
   ],
   "injectors": {
     "defaultRequire": 1
