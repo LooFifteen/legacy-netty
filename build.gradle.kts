@@ -48,7 +48,7 @@ dependencies {
 
     // dev env
     modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
-    localRuntime("org.apache.logging.log4j:log4j-core:2.23.1")
+    localRuntime("org.apache.logging.log4j:log4j-core:2.24.1")
     modLocalRuntime("maven.modrinth:legacy-mod-menu:1.1.0")
     modLocalRuntime(legacy.apiModule("legacy-fabric-resource-loader-v1", fabricApiVersion)!!)
 }
