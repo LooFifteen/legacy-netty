@@ -44,7 +44,7 @@ dependencies {
         modLocalRuntime(module)
     }
 
-    shadow(api("io.netty:netty-all:4.1.112.Final")!!)
+    shadow(api("io.netty:netty-all:4.1.114.Final")!!)
 
     // dev env
     modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
