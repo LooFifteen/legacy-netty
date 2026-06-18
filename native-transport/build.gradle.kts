@@ -47,7 +47,7 @@ dependencies {
     shadow(implementation("io.netty.incubator:netty-incubator-transport-native-io_uring:0.0.25.Final:linux-x86_64")!!)
 
     // dev env
-    modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
+    modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.2")
     localRuntime("org.apache.logging.log4j:log4j-core:2.23.1")
     modLocalRuntime("maven.modrinth:legacy-mod-menu:1.1.0")
     modLocalRuntime(legacy.apiModule("legacy-fabric-resource-loader-v1", fabricApiVersion)!!)
